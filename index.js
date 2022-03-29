@@ -7,23 +7,23 @@ function extraiLinks(text) {
     let temp;
 
     while ((temp = regex.exec(text)) !== null) {
-        arrayResultados.push({ [temp[1]]: temp[2] })
+        arrayResultados.push({ [temp[1]]: temp[2] });
     }
-    return arrayResultados
+    return arrayResultados.length === 0 ? false : arrayResultados;
 }
 
 function trataErro(err) {
     throw new Error(chalk.red(err));
 }
 
-async function pegaArquivo(path) {
+export default async function pegaArquivo(path) {
     const encoding = 'utf-8';
     try{
-        const data = await fs.promises.readFile(path, encoding)
-        console.log(extraiLinks(data))
+        const data = await fs.promises.readFile(path, encoding);
+        return extraiLinks(data);
     }catch (err) {
         trataErro(err);
     }
 }
 
-pegaArquivo('./arquivos/texto1.md');
+// pegaArquivo('./arquivos/texto1.md');
