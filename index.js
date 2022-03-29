@@ -17,7 +17,8 @@ function trataErro(err) {
 
 function pegaArquivo(path) {
     const encoding = 'utf-8';
-    fs.promises.readFile(path, encoding)
+    fs.promises
+    .readFile(path, encoding)
     .then((data) => console.log(chalk.green(data)))
     .catch((err) => trataErro(err))
 }
