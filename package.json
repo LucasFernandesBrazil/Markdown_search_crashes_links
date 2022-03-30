@@ -4,6 +4,7 @@
   "description": "Find crashes links in a markdown file",
   "keywords": ["markdown", "URL", "links", "crashes", "broken", "search"],
   "main": "./cli.js",
+  "type": "module",
   "bin": {
     "markdown-crashes-links": "./cli.js"
   },
