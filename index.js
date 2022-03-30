@@ -1,4 +1,4 @@
-import chalk from 'chalk';
+//import chalk from 'chalk';
 import fs from 'fs';
 
 function extraiLinks(text) {
@@ -13,7 +13,7 @@ function extraiLinks(text) {
 }
 
 function trataErro(err) {
-    throw new Error(chalk.red(err));
+    throw new Error(err);
 }
 
 export default async function pegaArquivo(path) {
