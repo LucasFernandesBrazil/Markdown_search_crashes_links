@@ -8,7 +8,7 @@ async function processaTexto(path) {
     try{
         const resultado = await getFile(path[2]);
         if (path[3] === 'validar'){
-            console.log(chalk.yellow('Links validados'), validaURLs(resultado));
+            console.log(chalk.yellow('Links validados'), await validaURLs(resultado));
         }
         //console.log(chalk.yellow('Lista de links'), resultado)
     } catch(err) {
