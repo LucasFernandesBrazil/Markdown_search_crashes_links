@@ -1,29 +1,27 @@
 //import chalk from 'chalk';
 import fs from 'fs';
 
-function extraiLinks(text) {
+function extractLinks(text) {
     const regex = /\[([^\]]*)\]\((https?:\/\/[^$#\s].[^\s]*)\)/gm;
-    const arrayResultados = [];
+    const arrayResults = [];
     let temp;
 
     while ((temp = regex.exec(text)) !== null) {
-        arrayResultados.push({ [temp[1]]: temp[2] });
+        arrayResults.push({ [temp[1]]: temp[2] });
     }
-    return arrayResultados.length === 0 ? false : arrayResultados;
+    return arrayResults.length === 0 ? false : arrayResults;
 }
 
-function trataErro(err) {
+function handleError(err) {
     throw new Error(err);
 }
 
-export default async function pegaArquivo(path) {
+export default async function getFile(path) {
     const encoding = 'utf-8';
     try{
         const data = await fs.promises.readFile(path, encoding);
-        return extraiLinks(data);
-    }catch (err) {
-        trataErro(err);
+        return extractLinks(data);
+    }catch(err) {
+        handleError(err);
     }
 }
-
-// pegaArquivo('./arquivos/texto1.md');
