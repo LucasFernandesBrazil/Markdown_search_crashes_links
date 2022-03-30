@@ -10,7 +10,7 @@ async function processaTexto(path) {
         if (path[3] === 'validar'){
             console.log(chalk.yellow('Links validados'), validaURLs(resultado));
         }
-        console.log(chalk.yellow('Lista de links'), resultado)
+        //console.log(chalk.yellow('Lista de links'), resultado)
     } catch(err) {
         console.log(err);
     }
