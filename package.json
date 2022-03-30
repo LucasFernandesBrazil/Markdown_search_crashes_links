@@ -1,15 +1,26 @@
 {
-  "name": "lib-markdown",
+  "name": "markdown-crashes-links",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "index.js",
+  "description": "Find crashes links in a markdown file",
+  "keywords": ["markdown", "URL", "links", "crashes", "broken", "search"],
+  "main": "./cli.js",
+  "bin": {
+    "<markdown-crashes-links>": "./cli.js"
+  },
+  "preferGlobal": true,
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./test",
     "cli": "node cli.js ./arquivos/texto1.md"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasFernandesBrazil/Markdown_search_crashes_links.git"
+  },
+  "homepage": "https://github.com/LucasFernandesBrazil/Markdown_search_crashes_links#readme",
+  "bugs": {
+    "url" : "https://github.com/LucasFernandesBrazil/Markdown_search_crashes_links/issues"
+  },
+  "author": "Lucas Fernandes <lucasfernandesprogrammer@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.0.1",
