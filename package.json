@@ -1,12 +1,12 @@
 {
   "name": "markdown-crashes-links",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Find crashes links in a markdown file",
   "keywords": ["markdown", "URL", "links", "crashes", "broken", "search"],
   "main": "./cli.js",
   "type": "module",
   "bin": {
-    "markdown-crashes-links": "./cli.js"
+    "mcl": "./cli.js"
   },
   "preferGlobal": true,
   "scripts": {

@@ -18,13 +18,13 @@ Use the package by CLI command, in the following format:
 ### `validate`
 
 ```cmd
-markdown-crashes-links <path-markdown-file> validate
+mcl <path-markdown-file> validate
 ```
 
 ### `validate example`
 
 ```cmd
-markdown-crashes-links ./file/example.md validate
+mcl ./file/example.md validate
 ```
 
 ## Acknowledgment
